@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// add route for new user, not just returning user
+
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);

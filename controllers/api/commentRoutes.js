@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newPost = await Post.create({
+    const newComment = await Comment.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newPost);
+    res.status(200).json(newComment);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -17,8 +17,8 @@ router.post('/', withAuth, async (req, res) => {
 
 router.put('/', withAuth, async (req, res) =>{
   try{
-      const postData = await Post.update(
-          { post_name: req.body.post_name },
+      const commentData = await Comment.update(
+          { comment_text: req.body.post_name },
           { returning: true, where: {id: req.params.id }}
       )
       res.status(200).json(postData)
@@ -30,19 +30,19 @@ router.put('/', withAuth, async (req, res) =>{
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const postData = await Post.destroy({
+    const commentData = await Comment.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!postData) {
-      res.status(404).json({ message: 'No blogpost found with this id!' });
+    if (!commentData) {
+      res.status(404).json({ message: 'No comment found with this id!' });
       return;
     }
 
-    res.status(200).json(postData);
+    res.status(200).json(commentData);
   } catch (err) {
     res.status(500).json(err);
   }
