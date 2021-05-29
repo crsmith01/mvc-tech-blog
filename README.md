@@ -6,18 +6,43 @@ Writing about tech can be just as important as making it. Developers spend plent
 
 My task this week was to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. This site was built from scratch and deployed to Heroku. The app follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
+## Table of Contents
+1. [Technologies Used](#Technologies-Used)
+2. [User Story](#User-Story)
+3. [Acceptance Criteria](#Acceptance-Criteria)
+4. [Mock Up](#Mock-Up)
+5. [Tests](#Tests)
+6. [Usage](#Usage)
+7. [Contact](#Contact)
+8. [License](#License)
+
+
+## Technologies Used
+```
+1. JavaScript
+2. Express.js
+3. Node.js
+4. MySQL2 package
+5. Sequelize package
+6. Express.handlebars package
+7. Dotenv package
+8. Bycrypt package
+9. Express-session package
+10. Connect-session-sequelize package
+```
+
 ## User Story
 
 ```md
-AS A developer who writes about tech
+AS A developer who writes about technology,
 I WANT a CMS-style blog site
-SO THAT I can publish articles, blog posts, and my thoughts and opinions
+SO THAT I can publish articles, blog posts, and my thoughts and opinions.
 ```
 
 ## Acceptance Criteria
 
 ```md
-GIVEN a CMS-style blog site
+GIVEN a CMS-style blog site:
 WHEN I visit the site for the first time
 THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
 WHEN I click on the homepage option
@@ -58,4 +83,35 @@ The following animation demonstrates the application functionality:
 
 ![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./Assets/14-mvc-homework-demo-01.gif) 
 
-## Getting Started
+
+The following video demonstrates the application's functionality':
+![Screencastify](______)
+
+The following link leads to the GitHub repository for this app:
+![GitHub Link](https://github.com/crsmith01/mvc-tech-blog)
+
+The following link leads to the deployed application on Heroku:
+![Heroku Link](_____________)
+
+
+
+## Tests
+To run tests, enter the following in your command-line: npm run test
+
+## Usage
+To start enter: node employee-tracker.js
+*Note: I have this as the start script in the package.json file, btu I cannot figure out why it won't work from the terminal as npm start.
+
+## Contact
+If you have any questions about the repo, contact me at [crsmith01](https://github.com/crsmith01).
+
+
+## License
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Copyright 2021 Catherine Smith
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
