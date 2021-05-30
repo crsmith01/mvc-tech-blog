@@ -15,8 +15,7 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // text/content = main part of blog post
-    text: {
+    content: {
       type: DataTypes.STRING,
     },
     date_created: {
