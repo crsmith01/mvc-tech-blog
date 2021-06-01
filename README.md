@@ -2,19 +2,16 @@
 
 ## My Task
 
-Writing about tech can be just as important as making it. Developers spend plenty of time creating new applications and debugging existing codebases, but most developers also spend at least some of their time reading and writing about technical concepts, recent advancements, and new technologies. A simple Google search for any concept covered in this course returns thousands of think pieces and tutorials from developers of all skill levels!
-
-My task this week was to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. This site was built from scratch and deployed to Heroku. The app follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+My task this week was to build a CMS-style blog site where developers can publish their blog posts and comment on other developers’ posts. This site was built from scratch and deployed to Heroku. The app follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 ## Table of Contents
 1. [Technologies Used](#Technologies-Used)
 2. [User Story](#User-Story)
 3. [Acceptance Criteria](#Acceptance-Criteria)
 4. [Mock Up](#Mock-Up)
-5. [Tests](#Tests)
-6. [Usage](#Usage)
-7. [Contact](#Contact)
-8. [License](#License)
+5. [Usage](#Usage)
+6. [Contact](#Contact)
+7. [License](#License)
 
 
 ## Technologies Used
@@ -79,28 +76,15 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ## Mock-Up
 
-The following animation demonstrates the application functionality:
-
-![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./Assets/14-mvc-homework-demo-01.gif) 
-
-
-The following video demonstrates the application's functionality':
-![Screencastify](______)
-
 The following link leads to the GitHub repository for this app:
 ![GitHub Link](https://github.com/crsmith01/mvc-tech-blog)
 
 The following link leads to the deployed application on Heroku:
 ![Heroku Link](_____________)
 
-
-
-## Tests
-To run tests, enter the following in your command-line: npm run test
-
 ## Usage
-To start enter: node employee-tracker.js
-*Note: I have this as the start script in the package.json file, btu I cannot figure out why it won't work from the terminal as npm start.
+To seed data, enter: node seeds/seed
+To start enter: node server
 
 ## Contact
 If you have any questions about the repo, contact me at [crsmith01](https://github.com/crsmith01).
