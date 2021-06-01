@@ -1,7 +1,47 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Post } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // add route for new user, not just returning user
+
+// GET at endpoint /api/users
+router.get('/', (req, res) => {
+  try {
+    const usersData = await User.findAll({
+      attributes: { exclude: ['password'] }
+    })
+    res.status(200).json(usersData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+// GET at endpoint /api/users/1 (or 2, 3, etc.)
+router.get('/:id', (req, res) => {
+  try {
+    const userData = await User.findOne({
+      attributes: { exclude: ['password'] },
+      where: { id: req.params.id},
+      include: [
+        {model: Post,},
+        {model: Comment, 
+        include: {
+          model: Post,
+          attributes: ['title']
+        }}
+      ]
+    })
+    if (!userData) {
+      res.status(404).json({ message: 'No user found with this id.' });
+      return;
+    }
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 
 router.post('/', async (req, res) => {
