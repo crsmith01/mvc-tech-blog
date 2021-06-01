@@ -9,17 +9,17 @@ const commentData = [
     "post_id": 2
   },
   {
-    "id": 1,
+    "id": 2,
     "content": "Comment 2 content.",
     "date_created": "05/30/2021",
     "user_id": 1,
     "post_id": 2
   },
   {
-    "id": 1,
+    "id": 3,
     "content": "Comment 3 content.",
     "date_created": "05/29/2021",
-    "user_id": 1,
+    "user_id": 2,
     "post_id": 3
   }
 ];
