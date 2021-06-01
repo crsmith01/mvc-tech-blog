@@ -37,7 +37,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-// POST - update/edit a comment by its id 
+// PUT - update/edit a comment by its id 
 router.put('/:id', withAuth, async (req, res) =>{
   try{
       const commentData = await Comment.update(
@@ -56,6 +56,7 @@ router.put('/:id', withAuth, async (req, res) =>{
 
 });
 
+// DELETE - delete comment by its id - at endpoint /api/comments/1
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const commentData = await Comment.destroy({
