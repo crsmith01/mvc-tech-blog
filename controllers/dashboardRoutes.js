@@ -5,6 +5,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/dashboard', withAuth, (req, res) => {
     Post.findAll({
+        // uses the ID from this session
         where: {user_id: req.session.user_id},
         include: [{
             model: Comment,
@@ -51,7 +52,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
             return;
         }
         // Serialize the data so the template can read it
-        const post = postData.get({ plain:true }));
+        const post = postData.get({ plain:true });
         res.render('edit-post', { post, loggedIn: true });
     })
     .catch(err => {
