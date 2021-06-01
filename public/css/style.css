@@ -17,8 +17,30 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
+html {
+  padding: 0;
+  margin: 0;
+  color: white;
+  background-color: lightblue;
+  position: relative;
+}
+
+.dashboard-btn {
+  color: lightblue;
+} 
+
+.delete-post-btn {
+  background-color:lightgray;
+  color: black;
+}
+
+.submit-btn {
+  color: black;
+  background-color:lightpink;
+}
+
+.btn {
+  color: white;
+  background-color: lightpink;
   font-weight: bold;
-  margin-left: -5px;
 }
