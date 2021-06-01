@@ -2,10 +2,8 @@ const router = require('express').Router();
 const { User, Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// add route for new user, not just returning user
-
 // GET at endpoint /api/users
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const usersData = await User.findAll({
       attributes: { exclude: ['password'] }
@@ -18,7 +16,7 @@ router.get('/', (req, res) => {
 
 
 // GET at endpoint /api/users/1 (or 2, 3, etc.)
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const userData = await User.findOne({
       attributes: { exclude: ['password'] },
@@ -34,9 +32,7 @@ router.get('/:id', (req, res) => {
     })
     if (!userData) {
       res.status(404).json({ message: 'No user found with this id.' });
-      return;
-    }
-    res.status(200).json(userData);
+    } else {res.status(200).json(userData)};
   } catch (err) {
     res.status(500).json(err);
   }
@@ -122,9 +118,8 @@ router.put('/:id', withAuth, (req, res) => {
     // not an array, right? double check - if needed (!userData[0])
     if (!userData) {
       res.status(404).json({ message: 'No user found with this id.' });
-      return;
-    }
-    res.json(userData);
+    } else {
+    res.json(userData)};
   } catch (err) {
     res.status(500).json(err);
   };
@@ -140,9 +135,8 @@ router.delete('/:id', withAuth, (req, res) => {
     // not an array, right? double check - if needed (!userData[0])
     if (!userData) {
       res.status(404).json({ message: 'No user found with this id.' });
-      return;
-    }
-    res.json(userData);
+    } else {
+    res.json(userData)};
   } catch (err) {
     res.status(500).json(err);
   };
