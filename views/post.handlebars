@@ -1,13 +1,19 @@
+{{> post-info post }}
+{{#if loggedIn}}
 <div class="jumbotron">
   <h1 class="display-4">{{post.title}}</h1>
   <p class="lead">Posted by {{user.username}} on {{format_date date_created}}</p>
   <p>{{post.content}}</p>
   <hr class="my-4">
   <div id="comments">
-      {{#each bp.comments as |comment|}}
+      {{#each post.comments as |comment|}}
       <p> {{comment.content}} </p>
       {{/each}}
   </div>  
-  <a class="btn btn-primary btn-lg" href="#" role="button">Leave a Comment</a>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Leave a Comment!</a>
 </div>
+{{/if}}
 
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
