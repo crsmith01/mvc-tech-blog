@@ -1,4 +1,4 @@
-// ***Dependencies***
+// Dependencies
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -17,7 +17,7 @@ const hbs = exphbs.create({ helpers });
 
 // Session for cookies
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'session is secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -32,6 +32,7 @@ app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+// Middleware for data parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Defines what routes to use
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+// Starts the server
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`App now listening on port ${PORT}!`));
 });

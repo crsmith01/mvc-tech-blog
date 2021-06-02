@@ -75,7 +75,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ```
 
 ## Mock-Up
-
+UPDATE UPDATE UPDATE
 The following link leads to the GitHub repository for this app:
 ![GitHub Link](https://github.com/crsmith01/mvc-tech-blog)
 
