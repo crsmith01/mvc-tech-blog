@@ -83,8 +83,8 @@ The following link leads to the deployed application on Heroku:
 ![Heroku Link](_____________)
 
 ## Usage
+To start enter: npm start
 To seed data, enter: node seeds/seed
-To start enter: node server
 
 ## Contact
 If you have any questions about the repo, contact me at [crsmith01](https://github.com/crsmith01).
