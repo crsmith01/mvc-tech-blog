@@ -1,6 +1,7 @@
 const addComment = async (event) => {
     event.preventDefault();
   
+    
     const content = document.querySelector('textarea[name="comment-body"]').value.trim();
    //  const commentContent = document.querySelector('#comment-content').value.trim();
 
@@ -16,6 +17,7 @@ const addComment = async (event) => {
           body: JSON.stringify({
              post_id,
              content
+            //  commentContent
           }),
           headers: {
              'Content-Type': 'application/json'

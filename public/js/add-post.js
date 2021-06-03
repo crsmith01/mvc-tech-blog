@@ -16,6 +16,7 @@ const newPost = async (event) => {
     });
   
     if (response.ok) {
+      // Redirect to the dashboard if the post is successfully added
       document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
