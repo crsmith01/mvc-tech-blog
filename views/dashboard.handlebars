@@ -1,14 +1,15 @@
 
 {{#if posts.length}}
 <section>
-   <h2>Your Posts</h2>
+   <h2>Dashboard</h2>
+   <h3>Your Posts</h3>
    <div>
       <ol>
       {{#each posts as |post|}}
          <li>
             {{> post-info post }}
             <button class="edit">
-               <a href="/dashboard/edit/{{post.id}}">Edit post</a>
+               <a href="/dashboard/edit/{{post.id}}">Edit Post</a>
             </button>
          </li>
       {{/each}}
