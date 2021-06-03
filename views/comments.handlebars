@@ -1,11 +1,11 @@
-<div class="comments">
+<div class="comment-form">
    {{#each this}}
       <div>
          <div>
             Comment added by {{user.username}} on {{format_date date_created}}:
          </div>
          <div>
-            {{content}}
+            {{comment.content}}
          </div>
       </div>
    {{/each}}
