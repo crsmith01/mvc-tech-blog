@@ -18,7 +18,7 @@ const commentData = [
   {
     "id": 3,
     "content": "Comment 3 content.",
-    "date_created": "05/29/2021",
+    "date_created": "05/31/2021",
     "user_id": 2,
     "post_id": 3
   }

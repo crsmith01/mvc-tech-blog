@@ -34,7 +34,7 @@ const postData = [
     "title": "What's new with MySQL?",
     "content": "Content for post #5 goes here.",
     "date_created": "05/29/2021",
-    "user_id": 4
+    "user_id": 3
   }
 ];
 

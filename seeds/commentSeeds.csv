@@ -1,0 +1,4 @@
+﻿id,content,date_created,user_id,post_id
+1,Comment 1 content,05/28/2021,1,2
+2,Comment 1 content,05/30/2021,1,2
+3,Comment 3 content,05/31/2021,2,3
