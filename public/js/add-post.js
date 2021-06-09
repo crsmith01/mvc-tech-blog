@@ -19,7 +19,9 @@ const newPost = async (event) => {
       // Redirect to the dashboard if the post is successfully added
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      // alert(response.statusText);
+      console.log(response.statusText);
+      swal('Oops!', 'There seems to be an error. Please try again.', 'error');
     };
 };
   

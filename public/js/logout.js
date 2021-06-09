@@ -8,7 +8,9 @@ const logout = async () => {
     // Redirects browser to homepage when user logs out
     document.location.replace('/');
   } else {
-    alert(response.statusText);
+    // alert(response.statusText);
+    console.log(response.statusText);
+    swal('Oops!', 'There seems to be an error. Please try again.', 'error');
   }
 };
 

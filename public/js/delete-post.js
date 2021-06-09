@@ -18,7 +18,9 @@ const deletePost = async (event) => {
       if (response.ok) {
         document.location.replace('/dashboard/');
       } else {
-        alert(response.statusText);
+        // alert(response.statusText);
+        console.log(response.statusText);
+        swal('Oops!', 'There seems to be an error. Please try again.', 'error');
       }; 
 };
 
