@@ -76,7 +76,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ```
 
 ## Mock-Up
-UPDATE UPDATE UPDATE
+##### UPDATE UPDATE UPDATE
 The following link leads to the GitHub repository for this app:
 ![GitHub Link](https://github.com/crsmith01/mvc-tech-blog)
 
@@ -86,7 +86,8 @@ The following link leads to the deployed application on Heroku:
 ## Usage
 To run the app locally, follow these steps:
 1. Install the necessary dependencies. Navigate to the repository's root directory and run the following: 
-```npm install
+```
+npm install
 ```
 2. Create a .env file in the root directory. It should contain the following information:
 ```
@@ -97,7 +98,7 @@ DB_PASSWORD=your password
 3. Create your own database by running the following query in MySQL Workbench:
 ```
 DROP DATABASE IF EXISTS techBlog_db;
-CREATE DATABASE techBlod_db;
+CREATE DATABASE techBlog_db;
 ```
 4. To seed the database, enter the following:
 ```
