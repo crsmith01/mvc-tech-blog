@@ -18,7 +18,7 @@ const hbs = exphbs.create({ helpers });
 
 // Session for cookies
 const sess = {
-  secret: 'session is secret',
+  secret: 'Super secret secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -42,6 +42,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // Starts the server
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App now listening on port ${PORT}!`));
 });
