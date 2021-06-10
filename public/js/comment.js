@@ -35,4 +35,5 @@ const addComment = async (event) => {
     };
   };
   
-  document.querySelector('.comment-form').addEventListener('submit', addComment);
+  document.querySelector('.comment-form').addEventListener('click', addComment);
+//   document.querySelector('#comment-form').addEventListener('click', addComment);

@@ -9,7 +9,7 @@
     <div>
       <label for="post-content">Post Content: {{post.content}}</label>
       {{!-- see which way works better --}}
-      <input class="textarea" name="post-content" type="text" value="{{ post.content }}" />
+      <input class="textarea" name="content" type="text" value="{{ post.content }}" />
     </div>
     <div>
       You created this post on {{ format_date post.date_created }}.
