@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// GET all posts at endpoint /api/posts
+// GET all posts at endpoint /api/posts, newest to odlest
 router.get('/', async (req, res) => {
   try {
     const postsData = await Post.findAll({
