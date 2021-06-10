@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 // GET homepage for user
 router.get('/', async (req, res) => {
-  console.log(req.session);
+  // console.log(req.session);
   try {
     // Get all blogposts and JOIN with user data
     const postsData = await Post.findAll({

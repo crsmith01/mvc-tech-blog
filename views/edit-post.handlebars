@@ -7,7 +7,8 @@
       <input class="input" id="post-title" name="post-title" type="text" value="{{ post.title }}" />
     </div>
     <div>
-      <label for="post-content">Post Content:</label>
+      <label for="post-content">Post Content: {{post.content}}</label>
+      {{!-- see which way works better --}}
       <input class="textarea" name="post-content" type="text" value="{{ post.content }}" />
     </div>
     <div>

@@ -1,9 +1,10 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// GET all posts at endpoint /api/posts, newest to odlest
+// GET all posts at endpoint /api/posts, newest to oldest
 router.get('/', async (req, res) => {
+  console.log('hi');
   try {
     const postsData = await Post.findAll({
       order: [['date_created', 'DESC']],
