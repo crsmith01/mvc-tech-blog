@@ -25,7 +25,7 @@ router.get('/', withAuth, (req, res) => {
     })
     .then(postData => {
         const posts = postData.map(post => post.get({ plain:true }));
-        res.render('dashboard', { posts, loggedIn: true });
+        res.render('dashboard', { posts, logged_in: true });
     })
     .catch(err => {
         console.log(err);
@@ -56,7 +56,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         }
         // Serialize the data so the template can read it
         const post = postData.get({ plain:true });
-        res.render('edit-post', { post, loggedIn: true });
+        res.render('edit-post', { post, logged_in: true });
     })
     .catch(err => {
         console.log(err);
@@ -83,7 +83,7 @@ router.post('/create', withAuth, (req, res) => {
     .then(postData => {
         // Serialize the data so the template can read it
         const posts = postData.map(post => post.get({ plain:true }));
-        res.render('create-post', { posts, loggedIn: true });
+        res.render('create-post', { posts, logged_in: true });
     })
     .catch(err => {
         console.log(err);
