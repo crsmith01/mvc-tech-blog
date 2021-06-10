@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET individual post by id with user and comment information
-router.get('/post/:id', async (req, res) => {
+router.get('/posts/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [

@@ -13,7 +13,7 @@
     </div>
     <div>
       You created this post on {{ format_date post.date_created }}.
-      <a href="/post/{{post.id}}">{{ post.comments.length}} {{ format_plural "comment" post.comments.length }}</a>
+      <a href="/posts/{{post.id}}">{{ post.comments.length}} {{ format_plural "comment" post.comments.length }}</a>
     </div>
     <button type="submit" class="button btn-success save-post-btn">Save Post</button>
     <button type="button" class="button btn-danger delete-post-btn">Delete Post</button>
