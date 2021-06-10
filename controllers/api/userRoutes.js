@@ -41,6 +41,7 @@ router.get('/:id', async (req, res) => {
 
 // POST for endpoint /api/users
 router.post('/', async (req, res) => {
+  console.log('testing++++++++++++++++');
   try {
     // const userData = await User.create(req.body);
     const userData = await User.create ({
