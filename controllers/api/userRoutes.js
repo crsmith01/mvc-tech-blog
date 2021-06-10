@@ -61,8 +61,9 @@ router.post('/', async (req, res) => {
   }
 });
 
-// POST - allow user to log in at endpoint /api/login
+// POST - at endpoint /api/users/login
 router.post('/login', async (req, res) => {
+  console.log('are you working????', req.body);
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -86,7 +87,7 @@ router.post('/login', async (req, res) => {
     // to save user info for duration of session
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.username = dbUserData.username;
+      // req.session.username = dbUserData.username;
       req.session.logged_in = true;
       
       res.json({ user: userData, message: 'You are now logged in!' });
@@ -94,6 +95,7 @@ router.post('/login', async (req, res) => {
 
   } catch (err) {
     res.status(400).json(err);
+    console.log('what is this')
   }
 });
 

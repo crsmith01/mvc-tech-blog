@@ -1,3 +1,5 @@
+// const swal = require('sweetalert');
+
 const loginForm = async (event) => {
   event.preventDefault();
 
@@ -19,6 +21,7 @@ const loginForm = async (event) => {
     } else {
       // alert(response.statusText);
       console.log(response.statusText);
+      console.log('what is happening');
       swal('Oops!', 'There seems to be an error. Please try again.', 'error');
     }
   }
