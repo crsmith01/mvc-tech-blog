@@ -6,7 +6,7 @@
       <ol>
       {{#each posts as |post|}}
          <li>
-            {{> post-info post }}
+            {{ post-info post }}
             <button class="edit">
                <a href="/dashboard/edit/{{post.id}}">Edit Post</a>
             </button>
