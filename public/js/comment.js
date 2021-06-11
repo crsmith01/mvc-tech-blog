@@ -26,6 +26,7 @@ const addComment = async (event) => {
        });
   
        if (response.ok) {
+         //  reload the same page with the content added
           document.location.reload();
        } else {
          //  alert(response.statusText);
@@ -35,5 +36,5 @@ const addComment = async (event) => {
     };
   };
   
-  document.querySelector('.comment-form').addEventListener('click', addComment);
-//   document.querySelector('#comment-form').addEventListener('click', addComment);
+//   document.querySelector('.comment-form').addEventListener('click', addComment);
+  document.querySelector('#comment-form').addEventListener('click', addComment);
