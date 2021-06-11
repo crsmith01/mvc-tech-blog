@@ -5,6 +5,7 @@ const withAuth = require('../utils/auth');
 
 // these are at endponts /dashboard...
 
+// Use withAuth middleware to prevent access to route
 router.get('/', withAuth, (req, res) => {
     console.log('is it hitting?')
     Post.findAll({
@@ -64,31 +65,5 @@ router.get('/edit/:id', withAuth, (req, res) => {
     });
 });
 
-router.post('/create', withAuth, (req, res) => {
-    Post.findAll({
-        where: {user_id: req.session.user_id},
-        include: [{
-            model: Comment,
-            include: {
-                model: User,
-                attributes: ['username']
-            }
-        },
-        {
-            model: User,
-            attributes: ['username']
-        }
-        ]
-    })
-    .then(postData => {
-        // Serialize the data so the template can read it
-        const posts = postData.map(post => post.get({ plain:true }));
-        res.render('create-post', { posts, logged_in: true });
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err)
-    });
-});
 
 module.exports = router;
