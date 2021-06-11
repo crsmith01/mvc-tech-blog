@@ -40,10 +40,10 @@ router.post('/', withAuth, async (req, res) => {
 // PUT - update/edit a comment by its id 
 router.put('/:id', withAuth, async (req, res) =>{
   try{
-      const commentData = await Comment.update(
-          { content: req.body.content,
+      const commentData = await Comment.update({
+          content: req.body.content,
           user_id: req.body.user_id,
-        post_id: req.body.post_id },
+          post_id: req.body.post_id },
           { where: {id: req.params.id }}
       )
       if (!commentData) {

@@ -1,5 +1,4 @@
 <!-- Show blogpost at top regardless of whether or not user is logged in -->
-{{#each posts as |post|}}
 <li>
     <div class="card mb-6">
         <header class="card-header-title">
@@ -19,9 +18,8 @@
                     comments.length}}</a>
             </div>
         </div>
-        <button class="edit"><a href="/dashboard/edit/{{post.id}}">Edit Post</a></button>
+        <button class="btn btn-info"><a href="/dashboard/edit/{{post.id}}">Edit Post</a></button>
 </li>
-{{/each}}
 
 <!-- Users can only comment if logged in -->
 {{#if logged_in}}
@@ -29,18 +27,16 @@
     <div>
         {{!-- <input name="comment-body"></input> --}}
         <textarea name="comment-body"></textarea>
-
     </div>
 
     <div>
-        <button class="button btn btn-warning" type="submit">Add Comment</button>
+        <button class="btn btn-warning" type="submit">Add Comment</button>
     </div>
-
 </form>
 {{/if}}
 
-{{!-- <div class="comments comment-form">
-   {{#each}}
+<div class="comments comment-form">
+   {{#each this}}
       <div class="comment">
          <div class="comment-user-info">
             Comment added by {{user.username}} on {{format_date date_created}}:
@@ -50,7 +46,7 @@
          </div>
       </div>
    {{/each}}
-</div> --}}
+</div>
 
 {{#if logged_in}}
 <script src="/js/comment.js"></script>

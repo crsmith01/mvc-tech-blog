@@ -11,7 +11,7 @@
                <header class="card-header-title">
                   <div class="card-title column">
                      <p class="text-light"></p>
-                     <a href="/posts/{{id}}" class="font-weight-bold font-capitalize text-left">{{title}} </a></p>
+                     <a href="/posts/{{id}}" class="font-weight-bold font-capitalize text-left p-3 mb-2 bg-info text-white">{{title}} </a></p>
                   </div>
                </header>
 
@@ -25,7 +25,7 @@
                         comments.length}}</a>
                   </div>
                </div>
-               <button class="edit"><a href="/dashboard/edit/{{post.id}}">Edit Post</a></button>
+               <button class="edit btn btn-danger"><a href="/dashboard/edit/{{post.id}}">Edit Post</a></button>
          </li>
          {{/each}}
       </ol>
