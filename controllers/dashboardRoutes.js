@@ -7,7 +7,6 @@ const withAuth = require('../utils/auth');
 
 // Use withAuth middleware to prevent access to route
 router.get('/', withAuth, (req, res) => {
-    console.log('is it hitting?')
     Post.findAll({
         // uses the ID from this session
         where: {user_id: req.session.user_id},
@@ -64,6 +63,5 @@ router.get('/edit/:id', withAuth, (req, res) => {
         res.status(500).json(err)
     });
 });
-
 
 module.exports = router;
