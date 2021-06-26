@@ -12,9 +12,34 @@
       {{/each}}
   </div>  
   {{!-- do not have a homeRoutes for /comments --}}
-  <a class="btn btn-primary btn-lg" href="/comments" role="button">Leave a Comment!</a>
 </div>
 {{/if}}
+
+{{#if logged_in}}
+<form class="comment-form" id="comment-form">
+    <div>
+        {{!-- <input name="comment-body"></input> --}}
+        <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+        <button class="btn btn-warning" type="submit">Add Comment</button>
+    </div>
+</form>
+{{/if}}
+
+<div class="comments comment-form">
+   {{#each this}}
+      <div class="comment">
+         <div class="comment-user-info">
+            Comment added by {{user.username}} on {{format_date date_created}}
+         </div>
+         <div id="comment-content">
+            {{comment.content}}
+         </div>
+      </div>
+   {{/each}}
+</div>
 
 
 

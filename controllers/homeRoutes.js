@@ -48,7 +48,8 @@ router.get('/posts/:id', async (req, res) => {
     // Serialize data so the template can read it
     const post = postData.get({ plain: true });
 
-    res.render('one-post', {
+    res.render('post', {
+    // res.render('one-post', {
       ...post,
       logged_in: req.session.logged_in
     });
